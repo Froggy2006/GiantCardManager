@@ -1,0 +1,428 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "GiantCardManager/1.0.0": {
+        "dependencies": {
+          "Inscryption.GameLibs": "1.9.0-r.0",
+          "NETStandard.Library": "2.0.3",
+          "Antlr3.Runtime": "3.5.0.2",
+          "BepInEx": "5.4.17.0",
+          "BepInEx.Harmony": "2.0.0.0",
+          "BepInEx.Preloader": "5.4.17.0",
+          "Harmony": "2.5.5.0",
+          "HarmonyXInterop": "1.0.0.0",
+          "InscryptionAPI": "1.0.0.0",
+          "InscryptionCommunityPatch": "1.0.0.0",
+          "JSONLoader": "2.0.0.0",
+          "Mono.Cecil.Mdb": "0.10.4.0",
+          "Mono.Cecil.Pdb": "0.10.4.0",
+          "Mono.Cecil.Rocks": "0.10.4.0",
+          "MonoMod.RuntimeDetour": "21.9.19.1",
+          "MonoMod.Utils": "21.9.19.1",
+          "NCalc": "3.5.0.0",
+          "PanoramicData.NCalcExtensions": "1.19.0.0",
+          "UnityEngine.AnimationModule": "0.0.0.0",
+          "UnityEngine.AssetBundleModule": "0.0.0.0",
+          "UnityEngine.AudioModule": "0.0.0.0",
+          "UnityEngine.CoreModule": "0.0.0.0",
+          "UnityEngine": "0.0.0.0",
+          "UnityEngine.ImageConversionModule": "0.0.0.0",
+          "UnityEngine.ParticleSystemModule": "0.0.0.0",
+          "UnityEngine.PhysicsModule": "0.0.0.0"
+        },
+        "runtime": {
+          "GiantCardManager.dll": {}
+        }
+      },
+      "Inscryption.GameLibs/1.9.0-r.0": {
+        "runtime": {
+          "lib/netstandard2.0/Assembly-CSharp.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/Sirenix.Serialization.dll": {
+            "assemblyVersion": "2.1.8.0",
+            "fileVersion": "2.1.8.0"
+          },
+          "lib/netstandard2.0/Sirenix.Utilities.dll": {
+            "assemblyVersion": "2.1.8.0",
+            "fileVersion": "2.1.8.0"
+          },
+          "lib/netstandard2.0/Unity.TextMeshPro.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/UnityEngine.UI.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Antlr3.Runtime/3.5.0.2": {
+        "runtime": {
+          "Antlr3.Runtime.dll": {
+            "assemblyVersion": "3.5.0.2",
+            "fileVersion": "3.5.1.0"
+          }
+        }
+      },
+      "BepInEx/5.4.17.0": {
+        "runtime": {
+          "BepInEx.dll": {
+            "assemblyVersion": "5.4.17.0",
+            "fileVersion": "5.4.17.0"
+          }
+        }
+      },
+      "BepInEx.Harmony/2.0.0.0": {
+        "runtime": {
+          "BepInEx.Harmony.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "BepInEx.Preloader/5.4.17.0": {
+        "runtime": {
+          "BepInEx.Preloader.dll": {
+            "assemblyVersion": "5.4.17.0",
+            "fileVersion": "5.4.17.0"
+          }
+        }
+      },
+      "Harmony/2.5.5.0": {
+        "runtime": {
+          "Harmony.dll": {
+            "assemblyVersion": "2.5.5.0",
+            "fileVersion": "2.5.5.0"
+          }
+        }
+      },
+      "HarmonyXInterop/1.0.0.0": {
+        "runtime": {
+          "HarmonyXInterop.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "InscryptionAPI/1.0.0.0": {
+        "runtime": {
+          "InscryptionAPI.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "InscryptionCommunityPatch/1.0.0.0": {
+        "runtime": {
+          "InscryptionCommunityPatch.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "JSONLoader/2.0.0.0": {
+        "runtime": {
+          "JSONLoader.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Mono.Cecil.Mdb/0.10.4.0": {
+        "runtime": {
+          "Mono.Cecil.Mdb.dll": {
+            "assemblyVersion": "0.10.4.0",
+            "fileVersion": "0.10.4.0"
+          }
+        }
+      },
+      "Mono.Cecil.Pdb/0.10.4.0": {
+        "runtime": {
+          "Mono.Cecil.Pdb.dll": {
+            "assemblyVersion": "0.10.4.0",
+            "fileVersion": "0.10.4.0"
+          }
+        }
+      },
+      "Mono.Cecil.Rocks/0.10.4.0": {
+        "runtime": {
+          "Mono.Cecil.Rocks.dll": {
+            "assemblyVersion": "0.10.4.0",
+            "fileVersion": "0.10.4.0"
+          }
+        }
+      },
+      "MonoMod.RuntimeDetour/21.9.19.1": {
+        "runtime": {
+          "MonoMod.RuntimeDetour.dll": {
+            "assemblyVersion": "21.9.19.1",
+            "fileVersion": "21.9.19.1"
+          }
+        }
+      },
+      "MonoMod.Utils/21.9.19.1": {
+        "runtime": {
+          "MonoMod.Utils.dll": {
+            "assemblyVersion": "21.9.19.1",
+            "fileVersion": "21.9.19.1"
+          }
+        }
+      },
+      "NCalc/3.5.0.0": {
+        "runtime": {
+          "NCalc.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.0.4"
+          }
+        }
+      },
+      "PanoramicData.NCalcExtensions/1.19.0.0": {
+        "runtime": {
+          "PanoramicData.NCalcExtensions.dll": {
+            "assemblyVersion": "1.19.0.0",
+            "fileVersion": "1.19.9.41892"
+          }
+        }
+      },
+      "UnityEngine.AnimationModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.AnimationModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.AssetBundleModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.AssetBundleModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.AudioModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.AudioModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.CoreModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.CoreModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.ImageConversionModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.ImageConversionModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.ParticleSystemModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.ParticleSystemModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.PhysicsModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.PhysicsModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.SharedInternalsModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.SharedInternalsModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GiantCardManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Inscryption.GameLibs/1.9.0-r.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CYk8lSFcQ8xCeNOaUx8hoR3WZq/nu3w0gtsFd8JnAGFHwIhbMqLobc3w2NFxnBlb5bgyJwUQqDr2vKol9DGJsg==",
+      "path": "inscryption.gamelibs/1.9.0-r.0",
+      "hashPath": "inscryption.gamelibs.1.9.0-r.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Antlr3.Runtime/3.5.0.2": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BepInEx/5.4.17.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BepInEx.Harmony/2.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BepInEx.Preloader/5.4.17.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Harmony/2.5.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HarmonyXInterop/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InscryptionAPI/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InscryptionCommunityPatch/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JSONLoader/2.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mono.Cecil.Mdb/0.10.4.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mono.Cecil.Pdb/0.10.4.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mono.Cecil.Rocks/0.10.4.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MonoMod.RuntimeDetour/21.9.19.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MonoMod.Utils/21.9.19.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NCalc/3.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PanoramicData.NCalcExtensions/1.19.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.AnimationModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.AssetBundleModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.AudioModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.CoreModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.ImageConversionModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.ParticleSystemModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.PhysicsModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.SharedInternalsModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
