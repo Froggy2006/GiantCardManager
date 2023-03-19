@@ -31,7 +31,7 @@ public static class GiantCardJSON
         foreach (string file in jsonFiles)
         {
             string filename = Path.GetFileName(file);
-            Plugin.Log.LogDebug($"Loading JSON (giant cards) {filename}");
+            Plugin.Log.LogDebug($"Loading JSON (giant card) {filename}");
 
             GiantCardList? giantCardList = JSONParser.FromJson<GiantCardList>(File.ReadAllText(file));
 
@@ -51,7 +51,7 @@ public static class GiantCardJSON
                 card.animatedPortrait = Plugin.CreateGiantCard(
                             texture: TextureHelper.GetImageAsTexture(giantCard.texture)
                         );
-                Plugin.Log.LogDebug($"Loaded JSON giant card '{card.name}'!");
+                Plugin.Log.LogInfo($"Loaded JSON giant card '{card.name}'!");
             }
         }
     }
