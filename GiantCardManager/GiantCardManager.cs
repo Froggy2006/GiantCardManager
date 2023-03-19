@@ -50,6 +50,9 @@ namespace GiantCardManager
 
             Plugin.Log = base.Logger;
 
+            Harmony harmony = new Harmony(PluginGuid);
+            harmony.PatchAll();
+
             /* load json giant cards! c: */
             GiantCardJSON.LoadAllGiantCards(); 
         }

@@ -1,14 +1,22 @@
 using System.IO;
+using HarmonyLib;
+using System.Collections.Generic;
 using BepInEx;
 using DiskCardGame;
 using TinyJson;
 using InscryptionAPI.Helpers;
+using InscryptionAPI.Card;
+using UnityEngine;
 
 #nullable enable
 namespace GiantCardManager.JSON;
+using Appearance = CardAppearanceBehaviour.Appearance;
 
+[HarmonyPatch]
 public static class GiantCardJSON
 {
+    public static Dictionary<string, GameObject> PrefabCache = new();
+
     [System.Serializable]
     public class GiantCardList
     {
@@ -48,11 +56,43 @@ public static class GiantCardJSON
                 if (giantCard.name == null || giantCard.texture == null) continue;
 
                 CardInfo card = CardLoader.GetCardByName(giantCard.name);
-                card.animatedPortrait = Plugin.CreateGiantCard(
+                GiveGiantProperties(card);
+
+                /* load changed prefab! */
+                GameObject prefab = Plugin.CreateGiantCard(
                             texture: TextureHelper.GetImageAsTexture(giantCard.texture)
                         );
+                /* make sure it doesn't get destroyed between scenes. */
+                GameObject.DontDestroyOnLoad(prefab); 
+                /* add to cache. c: */
+                PrefabCache.Add(card.name, prefab);
+
                 Plugin.Log.LogInfo($"Loaded JSON giant card '{card.name}'!");
             }
         }
+    }
+
+    private static void GiveGiantProperties(CardInfo card)
+    {
+        if (!card.HasTrait(Trait.Giant))
+            card.AddTraits(Trait.Giant);
+
+        if (!card.HasSpecialAbility(SpecialTriggeredAbility.GiantCard))
+            card.AddSpecialAbilities(SpecialTriggeredAbility.GiantCard);
+
+        if (!card.appearanceBehaviour.Contains(Appearance.GiantAnimatedPortrait))
+            card.AddAppearances(CardAppearanceBehaviour.Appearance.GiantAnimatedPortrait);
+
+    }
+
+    /* add the portrait to the card *from* the cache. i had to do this for talking cards too, it's fine. */
+    [HarmonyPatch(typeof(CardInfo), nameof(CardInfo.AnimatedPortrait), MethodType.Getter)]
+    [HarmonyPostfix]
+    private static void AnimatedIconPatch(CardInfo __instance, ref GameObject __result)
+    {
+        if (!PrefabCache.ContainsKey(__instance.name)) return;
+
+        __instance.animatedPortrait = PrefabCache[__instance.name];
+        __result = PrefabCache[__instance.name];
     }
 }
