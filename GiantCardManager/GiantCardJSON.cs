@@ -35,7 +35,7 @@ public static class GiantCardJSON
 
             GiantCardList? giantCardList = JSONParser.FromJson<GiantCardList>(File.ReadAllText(file));
 
-            /* this is a safe nullable check; trust it! :3 */
+            /* this is a safe nullable check; trust it! c: */
             if (giantCardList?.giantCards == null)
             {
                 /* this should be logged as an error. the user should know! */
