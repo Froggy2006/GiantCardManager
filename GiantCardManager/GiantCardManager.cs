@@ -23,6 +23,7 @@ using HarmonyLib;
 using Sirenix.Serialization.Utilities;
 using Random = System.Random;
 using TinyJson;
+using GiantCardManager.JSON;
 
 namespace GiantCardManager
 {
@@ -49,6 +50,8 @@ namespace GiantCardManager
 
             Plugin.Log = base.Logger;
 
+            /* load json giant cards! c: */
+            GiantCardJSON.LoadAllGiantCards(); 
         }
 
         private static Sprite ConvertToSprite(Texture2D texture)
@@ -102,48 +105,8 @@ namespace GiantCardManager
             Debug.Log(ML.displayedName + " has animated portrait: " + (ML.animatedPortrait != null));
         }
     }
-
-    [System.Serializable]
-    public class GiantCardList
-    {
-        public class GiantCardInfo
-        {
-            public string name;
-            public string texture;
-        }
-
-        public GiantCardInfo[] GiantCard;
-
-        public static void LoadAllGiantCaerds()
-        {
-            foreach (string file in Directory.EnumerateFiles(Paths.PluginPath, "*.json", SearchOption.AllDirectories))
-            {
-                string filename = file.Substring(file.LastIndexOf(Path.DirectorySeparatorChar) + 1);
-
-                if (filename.EndsWith("_giant.json"))
-                {
-                    Plugin.Log.LogDebug($"Loading JSON (giant cards) {filename}");
-                    GiantCardList giantCardInfo = JSONParser.FromJson<GiantCardList>(File.ReadAllText(file));
-                    if (giantCardInfo != null)
-                    {
-
-                        foreach (var giantCard in giantCardInfo.GiantCard)
-                        {
-                            CardInfo card = CardLoader.GetCardByName(giantCard.name);
-                            card.animatedPortrait = Plugin.CreateGiantCard(TextureHelper.GetImageAsTexture(giantCard.texture));
-                            Plugin.Log.LogDebug($"Loaded JSON giant Card " + card.name);
-                        }
-                    }
-                    else
-                    {
-                        Plugin.Log.LogDebug($"couldn't find any files with _giant.json");
-                    }
-
-                }
-            }
-        }
-    }
 }
+
 public static class Tools
 {
     public static Assembly _assembly;
