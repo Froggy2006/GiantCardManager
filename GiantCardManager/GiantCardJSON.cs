@@ -33,16 +33,16 @@ public static class GiantCardJSON
             string filename = Path.GetFileName(file);
             Plugin.Log.LogDebug($"Loading JSON (giant cards) {filename}");
 
-            GiantCardList? giantCardInfo = JSONParser.FromJson<GiantCardList>(File.ReadAllText(file));
+            GiantCardList? giantCardList = JSONParser.FromJson<GiantCardList>(File.ReadAllText(file));
 
             /* this is a safe nullable check; trust it! :3 */
-            if (giantCardInfo?.giantCards == null)
+            if (giantCardList?.giantCards == null)
             {
                 Plugin.Log.LogDebug($"Couldn't load JSON data from file {filename}!");
                 continue;
             }
 
-            foreach (var giantCard in giantCardInfo.giantCards)
+            foreach (var giantCard in giantCardList.giantCards)
             {
                 if (giantCard.name == null || giantCard.texture == null) continue;
 
