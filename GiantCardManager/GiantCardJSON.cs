@@ -38,7 +38,8 @@ public static class GiantCardJSON
             /* this is a safe nullable check; trust it! :3 */
             if (giantCardList?.giantCards == null)
             {
-                Plugin.Log.LogDebug($"Couldn't load JSON data from file {filename}!");
+                /* this should be logged as an error. the user should know! */
+                Plugin.Log.LogError($"Couldn't load JSON data from file {filename}!");
                 continue;
             }
 
